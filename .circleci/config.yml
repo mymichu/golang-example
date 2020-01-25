@@ -4,6 +4,7 @@
 version: 2.1
 orbs:
   codecov: codecov/codecov@1.0.5
+  sonarcloud: sonarsource/sonarcloud@1.0.1
 jobs:
   build:
     docker:
@@ -33,3 +34,10 @@ jobs:
           path: /tmp/artifacts
       - codecov/upload:
           file: coverage.txt
+      - sonarcloud/scan
+
+workflows:
+  main:
+    jobs:
+      - build:
+          context: SonarCloud
