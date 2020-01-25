@@ -8,4 +8,6 @@
   </a>
  </p>
  
+ [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mymichu_golang-example&metric=alert_status)](https://sonarcloud.io/dashboard?id=mymichu_golang-example)
+ 
 This is an example of a go application 
